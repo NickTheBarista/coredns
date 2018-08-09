@@ -2,19 +2,19 @@
 
 ## Name
 
-*kubernetes* - enables the reading zone data from a Kubernetes cluster.
+*kubernetes* - enables reading zone data from a Kubernetes cluster.
 
 ## Description
 
 It implements the [Kubernetes DNS-Based Service Discovery
 Specification](https://github.com/kubernetes/dns/blob/master/docs/specification.md).
 
-CoreDNS running the kubernetes plugin can be used as a replacement of kube-dns in a kubernetes
+CoreDNS running the *kubernetes* plugin can be used as a replacement for `kube-dns` in a Kubernetes
 cluster.  See the [deployment](https://github.com/coredns/deployment) repository for details on [how
 to deploy CoreDNS in Kubernetes](https://github.com/coredns/deployment/tree/master/kubernetes).
 
 [stubDomains and upstreamNameservers](http://blog.kubernetes.io/2017/04/configuring-private-dns-zones-upstream-nameservers-kubernetes.html)
-are implemented via the *proxy* plugin and kubernetes *upstream*. See example below.
+are implemented via the *proxy* plugin and Kubernetes *upstream*. See example below.
 
 This plugin can only be used once per Server Block.
 
@@ -218,4 +218,4 @@ or the word "any"), then that label will match all values.  The labels that acce
 *.service.default.svc.cluster.local. 5	IN A	192.168.10.10
 *.service.default.svc.cluster.local. 5	IN A	192.168.25.15
 ```
- This response can be randomized using the `loadbalance` plugin
+ This response can be randomized using the *loadbalance* plugin.
